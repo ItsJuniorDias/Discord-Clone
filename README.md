@@ -1,4 +1,4 @@
-# Discord-Clone
+# Student-book
 :green_book: Application built in flutter for students resembles a digital notebook
 
 ## Why?
