@@ -1,29 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:student_book/pages/SignUp.dart';
 import 'package:student_book/widgets/FormComponent.dart';
-
 
 class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Container(
-                margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
-                child: Column(
-                  children: <Widget>[
-                      Image.asset(            
-                                     'lib/assets/logo2.png',  
-                                       width: 150,
-                                       height: 150,          
-                                       fit: BoxFit.contain,            
-                                  ),
-                ],)
-              ),
+                  margin: EdgeInsets.fromLTRB(0, 25, 0, 0),
+                  child: Column(
+                    children: <Widget>[
+                      Image.asset(
+                        'lib/assets/logo2.png',
+                        width: 150,
+                        height: 150,
+                        fit: BoxFit.contain,
+                      ),
+                    ],
+                  )),
               Container(
                 width: 600,
                 height: 200,
@@ -31,20 +32,25 @@ class SignIn extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: <Widget>[
-                    FormComponent(),
+                    TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(labelText: 'Email'),
+                    ),
+                    TextFormField(
+                      obscureText: true,
+                      decoration: InputDecoration(labelText: 'Password'),
+                    ),
                     Container(
                       margin: EdgeInsets.fromLTRB(14, 16, 14, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: <Widget>[
                           GestureDetector(
-                           
                             child: Text("Forgot your password?",
                                 style: TextStyle(
                                     fontSize: 18,
                                     fontFamily: "Metropolis-Normal",
                                     fontWeight: FontWeight.w400)),
-
                           ),
                           Container(
                             margin: EdgeInsets.fromLTRB(10, 0, 0, 0),
@@ -59,7 +65,7 @@ class SignIn extends StatelessWidget {
               ),
               Container(
                   margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
-                  child: Row(
+                  child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       ButtonTheme(
@@ -82,22 +88,35 @@ class SignIn extends StatelessWidget {
                           color: Color(0xFFff6b61),
                         ),
                       ),
+                      Center(
+                        heightFactor: 1.7,
+                        child: ButtonTheme(
+                          height: 50,
+                          minWidth: 200,
+                          child: OutlineButton(
+                            color: Colors.orange,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Text(
+                              "SIGN UP",
+                              style: TextStyle(
+                                  color: Color(0xFFff6b61),
+                                  fontSize: 18,
+                                  fontFamily: "Metropolis-Normal",
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => SignUp()),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
                     ],
                   )),
-              Container(
-                margin: EdgeInsets.fromLTRB(0, 120, 0, 0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text("Or login with social account",
-                        style: TextStyle(
-                            fontSize: 18,
-                            fontFamily: "Metropolis-Normal",
-                            fontWeight: FontWeight.w400)),
-                  ],
-                ),
-              ),
-             
             ],
           ),
         ));
