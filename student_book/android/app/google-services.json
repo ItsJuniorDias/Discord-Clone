@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "269533694333",
+    "firebase_url": "https://student-book-65782.firebaseio.com",
+    "project_id": "student-book-65782",
+    "storage_bucket": "student-book-65782.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269533694333:android:eb6fd15585638b416c2414",
+        "android_client_info": {
+          "package_name": "com.example.student_book"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269533694333-8hqa0sg0np21b7h3skro2s6778sjljn4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAGe1iBHqg7AvXK2aeVmF5uxPKY6dy4k6Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269533694333-8hqa0sg0np21b7h3skro2s6778sjljn4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
