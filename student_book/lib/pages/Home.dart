@@ -8,7 +8,6 @@ class Home extends StatelessWidget {
         appBar: AppBar(
           title: Text('My Book'),
         ),
-        automaticallyImplyLeading = false,
         body: SafeArea(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
